@@ -187,7 +187,6 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-- **Processing data in models**
 - **Validation and model specs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
