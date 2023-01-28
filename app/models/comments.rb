@@ -4,6 +4,7 @@ class Comment < ApplicationRecord
   after_create :update_comments_counter
 
   private
+
   def update_comments_counter
     post_id = post.id
     Post.increment_counter(:comments_counter, post_id)
