@@ -1,5 +1,3 @@
-
-
 <!--
 HOW TO USE:
 This is an example of how you may give instructions on setting up your project locally.
@@ -24,7 +22,6 @@ OPTIONAL SECTIONS:
 
 After you're finished please remove all the comments and instructions!
 -->
-
 
 <!-- TABLE OF CONTENTS -->
 
@@ -56,6 +53,7 @@ After you're finished please remove all the comments and instructions!
 **Blogger App** is a blogging web app built with ruby on rails that is capable of keeping a catalogue of blog posts by different authors as well as the likes and comments of these blog posts.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 - Ruby on Rails
 - PostgreSQL
 
@@ -93,7 +91,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a> 
+## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://yourdeployedapplicationlink.com) [Under construction]
 
@@ -127,24 +125,26 @@ Example command:
 
 Clone this repository to your desired folder:
 
-
-
 ```sh
   cd desired_folder
   git clone https://github.com/amon-cofie/blog-app.git
 ```
 
-
 ### Install
 
 Install this project with:
 
-
 ```sh
   cd blog-app
-  gem install
+  bundle install
+
 ```
 
+create your database schema by running the migration files with the following command:
+
+```
+rails db:migrate
+```
 
 ### Usage
 
@@ -154,7 +154,6 @@ To run the project, execute the following command:
   rails server
 ```
 
-
 ### Run tests
 
 To run tests, run the following command:
@@ -162,7 +161,6 @@ To run tests, run the following command:
 ```sh
   bin/rails test test/models/article_test.rb
 ```
-
 
 ### Deployment
 
@@ -187,6 +185,7 @@ You can deploy this project using:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
 - **Validation and model specs**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
