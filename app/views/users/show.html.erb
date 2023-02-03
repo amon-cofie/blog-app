@@ -1,1 +1,30 @@
-<h1>I am showing</h1>
+<div>
+    <div>
+        <img src=<%=@user.photo%>>
+        <p>
+            <%=@user.name%>
+        </p>
+        <p>
+            Number of posts: <%=@user.posts_counter%>
+        </p>
+    </div>
+</div>
+<div>
+    <p>Bio</p>
+    <p>
+        <%=@user.bio%>
+    </p>
+</div>
+<div>
+    <% @posts.each do |post| %>
+        <%= render partial: "post_card", locals: {post: post}%>
+    <% end %>
+</div>
+
+<a href="/users/<%=@user.id%>/posts">
+    <button>
+
+        See all posts
+    
+    </button>
+</a>

@@ -1,3 +1,18 @@
-<h1>
-    These are the users posts
-<h1>
+
+    <div>
+        <img src=<%=@user.photo%>>
+        <div>
+            <p><%=@user.name%></p>
+            <p><%=@user.posts_counter%></p>
+        </div>
+    </div>
+
+    <div>
+        <%@posts.each do |post|%>
+        
+            <%= render partial: "post_card", locals: {post: post, comments: @comments, user: @user}%>
+
+        <%end%>
+    </div>
+    
+
