@@ -1,3 +1,25 @@
-<h1>
-    These are the users posts
-<h1>
+
+<div class="posts_index_user">
+    <div class="posts_index_user_image">
+        <img src=<%=@user.photo%>>
+    </div>
+    <div class="posts_index_user_details">
+
+        <h3 class="posts_index_user_details_username"><%=@user.name%></h3>
+        <p class="posts_index_user_details_number_of_posts">Number of posts: <%=@user.posts_counter%></p>
+    </div>
+</div>
+
+<div class="posts_index_user_posts">
+    <%@posts.each do |post|%>
+    
+        <%= render partial: "post_card", locals: {post: post, comments: @comments, user: @user}%>
+
+    <%end%>
+</div>
+    
+<div class="posts_index_pagination_button">    
+    <button>
+        Pagination        
+    </button>
+</div>

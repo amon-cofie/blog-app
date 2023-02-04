@@ -1,0 +1,11 @@
+<div class="users_show_user_posts_container">
+    <h3 class="users_show_user_post_title">
+        <%=post.title%>
+    </h3>
+    <p>
+        <%=post.text%>
+    </p>
+    <p class="users_show_user_post_stats">
+        <%= "Comments: #{post.comments_counter}, Likes: #{post.likes_counter}"%>
+    </p>
+</div>

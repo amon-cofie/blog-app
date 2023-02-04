@@ -1,0 +1,15 @@
+<div class="users_index_card">
+    <div class="users_index_card_image">
+        <img src=<%=user.photo%>>
+    </div>
+    <div class="users_index_card_details">
+        <h3 class="users_index_card_details_username">  
+            <a href="/users/<%=user.id%>">
+                <%=user.name%>
+            </a>
+        </h3>
+        <p class="users_index_card_details_number_of_posts">
+            Number of posts: <%=user.posts_counter%>
+        </p>
+    </div>
+</div>
