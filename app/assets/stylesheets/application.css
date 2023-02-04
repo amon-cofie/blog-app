@@ -13,3 +13,154 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  padding: 20px;
+}
+
+.users_index_card,
+.users_show_user,
+.posts_index_user {
+  display: flex;
+  padding: 10px 10px;
+  gap: 10px;
+}
+
+.users_index_card_image,
+.users_show_user_image,
+.posts_index_user_image {
+  border: 2px solid black;
+  flex: 1;
+  width: 200px;
+  height: 250px;
+  overflow: hidden;
+  background-color: #2d2d31;
+  opacity: 0.8;
+  background-image: linear-gradient(#d9dbfd 1px, transparent 1px), linear-gradient(to right, #d9dbfd 1px, #2d2d31 1px);
+  background-size: 20px 20px;
+}
+
+.users_index_card_details,
+.users_show_user_details,
+.posts_index_user_details {
+  padding: 2rem;
+  border: 2px solid black;
+  flex: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users_index_card_details_username,
+.users_show_user_details_username,
+.posts_index_user_details_username {
+  text-decoration: none;
+  font-size: 4rem;
+}
+
+.users_index_card_details_username a,
+.users_show_user_details_username a,
+.posts_index_user_posts_container a {
+  text-decoration: none;
+}
+
+.users_index_card_details_number_of_posts,
+.user_show_user_details_number_of_posts,
+.posts_index_user_details_number_of_posts {
+  align-self: flex-end;
+  font-size: 1.6rem;
+}
+
+.users_show_user_bio {
+  padding: 10px;
+}
+
+.users_show_user_bio_container,
+.users_show_user_posts_container,
+.posts_index_user_posts_container {
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.users_show_user_bio_label,
+.users_show_user_post_title,
+.posts_index_user_post_title {
+  font-size: 1.3rem;
+}
+
+.users_show_user_all_posts_button_container,
+.posts_index_pagination_button {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.users_show_user_posts,
+.posts_index_user_posts {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.users_show_user_post_stats,
+.posts_index_user_post_stats {
+  text-align: right;
+}
+
+.posts_index_user_comments_container {
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.posts_index_post_and_comment_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  margin-bottom: 20px;
+}
+
+.posts_show_container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.posts_show_post_container,
+.posts_show_comments_container {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.posts_show_post_title {
+  float: left;
+}
+
+.posts_show_post_stats {
+  float: right;
+}
+
+.posts_show_post_text {
+  clear: both;
+  padding-top: 10px;
+}
+
+.users_show_user_all_posts_button_container button,
+.posts_index_pagination_button button {
+  font-size: 1.4rem;
+  border: 2px solid black;
+  padding: 5px 20px;
+  box-shadow: 3px 3px;
+}

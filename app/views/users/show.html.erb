@@ -1,30 +1,34 @@
-<div>
-    <div>
+<div class="users_show_user">
+    <div class="users_show_user_image">
         <img src=<%=@user.photo%>>
-        <p>
+    </div>
+    <div class="users_show_user_details">        
+        <p class="users_show_user_details_username">
             <%=@user.name%>
         </p>
-        <p>
+        <p class="user_show_user_details_number_of_posts">
             Number of posts: <%=@user.posts_counter%>
         </p>
     </div>
 </div>
-<div>
-    <p>Bio</p>
-    <p>
-        <%=@user.bio%>
-    </p>
+<div class="users_show_user_bio">
+    <div class="users_show_user_bio_container">
+        <h3 class="users_show_user_bio_label">Bio</h3>
+        <p>
+            <%=@user.bio%>
+        </p>
+    </div>
 </div>
-<div>
-    <% @posts.each do |post| %>
+<div class="users_show_user_posts">
+    <% @user.recent_posts.each do |post| %>
         <%= render partial: "post_card", locals: {post: post}%>
     <% end %>
 </div>
 
-<a href="/users/<%=@user.id%>/posts">
-    <button>
-
-        See all posts
-    
-    </button>
-</a>
+<div class="users_show_user_all_posts_button_container">
+    <a href="/users/<%=@user.id%>/posts">
+        <button>
+            See all posts        
+        </button>
+    </a>
+</div>

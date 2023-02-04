@@ -1,21 +1,26 @@
-<div>
-    <p>
-        <%="#{@post.title} by #{@user.name}"%>
-    </p>
+<div class="posts_show_container">
 
-    <p>
-        <%="Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}"%>
-    </p>
+    <div class="posts_show_post_container">
+        <p class="posts_show_post_title">
+            <%="#{@post.title} by #{@user.name}"%>
+        </p>
 
-    <p>
-        <%= @post.text%>
-    </p>
-</div>
+        <p class="posts_show_post_stats">
+            <%="Comments: #{@post.comments_counter}, Likes: #{@post.likes_counter}"%>
+        </p>
 
-<div>
-    <%@comments.each do |comment|%>
-        <%@all_users.each do |each_user|%>
-            <p><%= "#{each_user.name}: #{comment.text}" if each_user.id == comment.author_id%></p>
+        <p class="posts_show_post_text">
+            <%= @post.text%>
+        </p>
+    </div>
+
+    <div class="posts_show_comments_container">
+        <%="No comments for this post yet" if @post.comments_counter == 0%>
+        <%@comments.each do |comment|%>
+            <%@all_users.each do |each_user|%>
+                <p><%= "#{each_user.name}: #{comment.text}" if each_user.id == comment.author_id && comment.post_id == @post.id%></p>
+            <%end%>
         <%end%>
-    <%end%>
+    </div>
+
 </div>
