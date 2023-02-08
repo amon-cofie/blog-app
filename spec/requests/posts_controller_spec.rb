@@ -2,7 +2,12 @@ require 'rails_helper'
 
 RSpec.describe 'PostsController', type: :request do
   describe 'GET /posts' do
-    before(:each) { get '/users/1/posts/' }
+    before(:each) do
+      @user = User.create(name: 'David', photo: 'https://picsum.photos/id/237/200/300',
+                          bio: 'I want to make the world a better place')
+      @post = Post.create(title: 'Post 1', text: 'Test post 1', author: @user)
+      get '/users/1/posts/'
+    end
 
     it 'should have status :success' do
       expect(response).to have_http_status(:success)
@@ -13,7 +18,7 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'should return the list of posts of user with id' do
-      expect(response.body).to include('These are the users posts')
+      expect(response.body).to include('Post 1')
     end
   end
 
@@ -29,7 +34,7 @@ RSpec.describe 'PostsController', type: :request do
     end
 
     it 'should return details of the post with id selected' do
-      expect(response.body).to include('This is the post with the id presented')
+      expect(response.body).to include('Test post 1')
     end
   end
 end
