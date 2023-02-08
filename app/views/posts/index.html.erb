@@ -13,7 +13,7 @@
 <div class="posts_index_user_posts">
     <%@posts.each do |post|%>
     
-        <%= render partial: "post_card", locals: {post: post, comments: @comments, user: @user}%>
+        <%= render partial: "post_card", locals: {post: post, comments: post.comments, user: @user}%>
 
     <%end%>
 </div>
