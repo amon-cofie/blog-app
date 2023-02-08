@@ -155,11 +155,11 @@ To run the project, execute the following command:
 ```
 
 ### Run tests
-
 To run tests, run the following command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rails g rspec:install
+  bundle exec rspec rails
 ```
 
 ### Deployment
