@@ -84,7 +84,8 @@ body {
 
 .users_show_user_bio_container,
 .users_show_user_posts_container,
-.posts_index_user_posts_container {
+.posts_index_user_posts_container,
+.user_sign_up_form_container {
   border: 2px solid black;
   padding: 10px;
   display: flex;
@@ -158,9 +159,43 @@ body {
 }
 
 .users_show_user_all_posts_button_container button,
-.posts_index_pagination_button button {
+.posts_index_pagination_button button,
+.actions input {
   font-size: 1.4rem;
   border: 2px solid black;
   padding: 5px 20px;
   box-shadow: 3px 3px;
+}
+
+.user_sign_up_form_container {
+  border: none;
+  align-items: center;
+}
+
+.user_sign_up_form_container form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.field {
+  width: 100%;
+}
+
+.field input,
+.field textarea {
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.login_checkbox {
+  align-self: center;
+  padding: 10px;
 }
